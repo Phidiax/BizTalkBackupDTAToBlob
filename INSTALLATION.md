@@ -47,13 +47,10 @@ To enable BizTalk Server to back up to Azure Blob Storage, you must configure a 
           SECRET = 'myaccountkey==';
      ```
 
-3. **Reference the Credential in Your Backup Scripts**
-   - Ensure your backup procedures or jobs reference the credential name you created.
-
-4. **Verify Permissions**
+3. **Verify Permissions**
    - The SQL Server service account must have permission to use the credential.
 
-5. **Test the Backup**
+4. **Test the Backup**
    - Run a test backup to confirm the credential is working as expected.
 
 
