@@ -14,9 +14,12 @@ This document explains how to install and update the BizTalk Server stored proce
    - The default location is:
      - `C:\Program Files\Microsoft BizTalk Server 2020\Schema`
 
+
 2. **Copy the Scripts**
    - After installing BizTalk Server, copy the stored procedure scripts from `BTS2020WithBlob` into the Schema directory above.
    - Do not copy scripts from `ClassicBTS2020`; those are for reference only.
+   - The main script, `dtasp_PurgeTrackingDatabase_BLOB.sql`, includes logic to automatically back up the existing `dtasp_PurgeTrackingDatabase` procedure (if present) to `dtasp_PurgeTrackingDatabase_ORG` before installing the new version. The new procedure is then installed as `dtasp_PurgeTrackingDatabase` and granted the necessary permissions.
+   - This ensures you can revert to the previous version if needed, and that the new logic is active after installation.
 
 3. **Apply Updates**
    - After any BizTalk Server update or hotfix, repeat the copy process to ensure the latest scripts from `BTS2020WithBlob` are present in the Schema directory.
