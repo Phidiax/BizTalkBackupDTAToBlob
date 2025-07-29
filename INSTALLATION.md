@@ -1,3 +1,4 @@
+
 # Installation Instructions for BizTalk Server Stored Procedure Scripts
 
 ## Overview
@@ -23,8 +24,38 @@ This document explains how to install and update the BizTalk Server stored proce
 4. **Run BizTalk Configuration**
    - When you run the BizTalk Server Configuration wizard, the scripts in the Schema directory will be installed automatically as part of the normal configuration process.
 
-5. **Review Configuration Guide**
-   - After completing installation and job creation, read the file `BTS2020WithBlob\BLOB SUPPORTED BTS 2020 Configure the Backup BizTalk Server Job.md` for detailed instructions on configuring and managing the Backup BizTalk Server job with Azure Blob Storage support.
+
+## Configuring SQL Named Credentials for Azure Blob Storage
+
+To enable BizTalk Server to back up to Azure Blob Storage, you must configure a SQL Named Credential for the storage account. Follow these steps:
+
+1. **Open SQL Server Management Studio (SSMS)**
+   - Connect to the BizTalk SQL Server instance.
+
+2. **Create a SQL Credential**
+   - In a new query window, run the following command (replace placeholders with your values):
+
+     ```sql
+     CREATE CREDENTIAL [<CredentialName>]
+     WITH IDENTITY = '<storage-account-name>',
+          SECRET = '<storage-account-key>';
+     ```
+   - Example:
+     ```sql
+     CREATE CREDENTIAL [MyBlobCredential]
+     WITH IDENTITY = 'myaccount',
+          SECRET = 'myaccountkey==';
+     ```
+
+3. **Reference the Credential in Your Backup Scripts**
+   - Ensure your backup procedures or jobs reference the credential name you created.
+
+4. **Verify Permissions**
+   - The SQL Server service account must have permission to use the credential.
+
+5. **Test the Backup**
+   - Run a test backup to confirm the credential is working as expected.
+
 
 ## Notes
 
@@ -32,7 +63,14 @@ This document explains how to install and update the BizTalk Server stored proce
 
 - For more details on stored procedure requirements, see the official BizTalk Server documentation.
 
+- This change is backwards compatable and will not impact the behavior of existing DTA Tracking backup processes.
+
 ---
 
-For questions about credential name limits, see the official documentation:
-[CREATE CREDENTIAL (Transact-SQL) - Microsoft Learn](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-credential-transact-sql)
+
+---
+
+## Further Reading
+
+- [CREATE CREDENTIAL (Transact-SQL) - Microsoft Learn](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-credential-transact-sql)
+- [SQL Server Backup to URL - Microsoft Learn](https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/backup-to-url-sql-server)

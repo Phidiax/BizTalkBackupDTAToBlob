@@ -20,13 +20,10 @@ This project provides enhanced BizTalk Server backup scripts and job configurati
 ## Getting Started
 
 1. Follow the instructions in `INSTALLATION.md` to install and configure the scripts.
-2. Run `CreateBackupJobsWithBlobSupport.sql` to set up the backup jobs.
-3. Review `BTS2020WithBlob/BLOB SUPPORTED BTS 2020 Configure the Backup BizTalk Server Job.md` for detailed configuration steps.
 
 ## Documentation
 
 - `INSTALLATION.md`: Installation and update instructions
-- `BTS2020WithBlob/BLOB SUPPORTED BTS 2020 Configure the Backup BizTalk Server Job.md`: Configuration guide
 - `CREDITS.md`: Project credits
 
 ## Production Readiness
