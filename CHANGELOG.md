@@ -8,6 +8,7 @@
 - Improved backup path logic to trim a trailing path separator (either `\` or `/`) from `@nvcFolder` before constructing the backup file path.
 - The backup path logic now uses the correct separator for file system or Azure Blob Storage URLs.
 - Updated documentation in `INSTALLATION.md` to explain the backup and replacement process for the stored procedure.
+- Added the "BTS2020WithBlob\BTS_Tracking_Logic.sql" file, which was previously referenced in the installation guide but missing from the release. This file is now included for completeness.
 
 ### Changed
 - No other changes recorded yet.
