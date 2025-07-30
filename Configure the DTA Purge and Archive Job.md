@@ -106,7 +106,7 @@ COPY the appropriate example
 
 <button onclick="navigator.clipboard.writeText(document.getElementById('CopyBLOB').innerText)">CopyBLOB</button>
 <pre><code id="Backup to BLOB">exec dtasp_BackupAndPurgeTrackingDatabase 1, 0, 1,
-\'https://3709backup.blob.core.windows.net/biztalktestbackup\', null, 0,
+'https://3709backup.blob.core.windows.net/biztalktestbackup', null, 0,
 1</code></pre>
 
 8.  On the **Job Properties - DTA Purge and Archive
