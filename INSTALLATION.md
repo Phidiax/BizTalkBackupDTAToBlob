@@ -1,11 +1,10 @@
-
 # Installation Instructions for BizTalk Server Stored Procedure Scripts
 
 ## Overview
 
-This document explains how to install and update the BizTalk Server stored procedure scripts supporting Azure Blob Storage backup. These scripts are provided in two folders:
+This document explains how to install and update the BizTalk Server stored procedure scripts supporting Azure Blob Storage backup for the BizTalk Tracking (DTA) database. **All other BizTalk databases already support backup to Azure Blob Storage using built-in features; this solution specifically adds support for the DTA database.** These scripts are provided in two folders:
 
-- `BTS2020WithBlob`: Updated scripts supporting Azure Blob Storage. **Use these scripts for installation.**
+- `BTS2020WithBlob`: Updated scripts supporting Azure Blob Storage for the DTA database. **Use these scripts for installation.**
 - `ClassicBTS2020`: Original scripts for classic backup scenarios. **For reference only; do not install.**
 
 ## Installation Steps

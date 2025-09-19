@@ -1,4 +1,3 @@
-
 # BizTalk Server Backup to Azure Blob Storage
 
 ## Project Back Story
@@ -9,11 +8,11 @@ This work is dedicated to the BizTalk community and all contributors who have he
 
 ---
 
-This project provides enhanced BizTalk Server backup scripts and job configuration to support backing up BizTalk databases to Azure Blob Storage.
+This project provides enhanced BizTalk Server backup scripts and job configuration to support backing up the BizTalk Tracking (DTA) database to Azure Blob Storage. **All other BizTalk databases already support backup to Azure Blob Storage using built-in features; this solution specifically adds support for the DTA database.**
 
 ## Features
 
-- Updated stored procedures for Azure Blob Storage support
+- Updated stored procedures for Azure Blob Storage support (DTA database only)
 - SQL Credential integration for secure backups
 - Step-by-step installation and configuration guides
 

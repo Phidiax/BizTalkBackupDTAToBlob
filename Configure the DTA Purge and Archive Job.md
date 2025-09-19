@@ -5,8 +5,8 @@
 Before you can archive or purge data from the BizTalk Tracking
 (BizTalkDTADb) database, you must configure the DTA Purge and Archive
 (BizTalkDTADb) job. This job is configured to call the
-dtasp_BackupAndPurgeTrackingDatabase store procedure, which uses six
-parameters you must configure.
+dtasp_BackupAndPurgeTrackingDatabase stored procedure, which uses six
+parameters you must configure. **Note:** The Azure BLOB backup enhancement described here is specific to the DTA database; all other BizTalk databases already support backup to Azure BLOB storage using built-in features.
 
 **Prerequisites**
 

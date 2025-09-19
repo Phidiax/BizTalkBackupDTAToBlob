@@ -1,3 +1,7 @@
+
+--
+-- Note: This procedure is for the BizTalk Tracking (DTA) database only; all other BizTalk databases already support backup to Azure Blob Storage using built-in features.
+--
 if exists (select * from sysobjects where id = object_id(N'[dbo].[dtasp_BackupTrackingDatabase_BLOB]') AND OBJECTPROPERTY(id, N'IsProcedure') = 1) DROP PROCEDURE [dbo].[dtasp_BackupTrackingDatabase_BLOB]
 GO
 
