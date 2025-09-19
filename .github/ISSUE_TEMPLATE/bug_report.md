@@ -1,18 +1,32 @@
-
 <p align="center">
 	<a href="https://www.phidiax.com/" target="_blank"><img src="https://static.wixstatic.com/media/f9592c_36f18dd9f56d463cb8dcc9ae97d69ac4~mv2.png/v1/crop/x_93,y_20,w_316,h_85/fill/w_442,h_112,al_c,lg_1,q_85,enc_avif,quality_auto/logo_icon_w500_h125_transparent_white.png" alt="Phidiax Logo" width="300" /></a>
 	<br>
 	<strong>Phidiax: Architected for Excellence. Engineered for Impact.</strong>
 </p>
+name: Bug Report
+description: File a bug report to help us improve
+labels: bug
+---
 
-# Credits
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-Special thanks to the following contributors:
+**To Reproduce**
+Steps to reproduce the behavior:
 
-- Bill Chesnut (BizTalkBill) who has documented the Backup Jobs recreation scripts
-- Sandro Pereira for asking me to look into this
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-- All other contributors to the BizTalk community
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Environment (please complete the following information):**
+- OS: [e.g. Windows 10]
+- SQL Server version: [e.g. 2019]
+- BizTalk version: [e.g. 2020]
+
+**Additional context**
+Add any other context about the problem here.
 
 ---
 <p align="center">

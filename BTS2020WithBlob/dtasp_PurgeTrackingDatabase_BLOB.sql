@@ -1,4 +1,10 @@
-
+--/ Copyright (c) 2025 Phidiax, LLC. All rights reserved.
+--/ https://www.phidiax.com | support@phidiax.com
+--/ Architected for Excellence. Engineered for Impact.
+--/ Smarter Systems. Smarter Decisions.
+--/
+--/ This code and information is provided "AS IS" without warranty of any kind.
+--/ See LICENSE.md for details.
 --
 -- Note: This procedure is for the BizTalk Tracking (DTA) database only; all other BizTalk databases already support backup to Azure Blob Storage using built-in features.
 --
