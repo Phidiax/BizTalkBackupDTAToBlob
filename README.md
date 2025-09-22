@@ -31,14 +31,16 @@ This project provides enhanced BizTalk Server backup scripts and job configurati
 
 ## Getting Started
 
-1. Follow the instructions in [INSTALLATION.md](INSTALLATION.md) to install and configure the scripts.
+1. **📋 View the Visual Installation Workflow**: [INSTALLATION_WORKFLOW.md](INSTALLATION_WORKFLOW.md) - Interactive flowchart of the complete process
+2. **📖 Follow Detailed Instructions**: [INSTALLATION.md](INSTALLATION.md) - Step-by-step installation and configuration guide
 
 > **Note:** This solution is designed for manual installation and configuration. Automation of deployment or installation is out of scope and not supported. All steps should be performed by a qualified administrator following the provided documentation.
 
 
 ## Documentation
 
-- [INSTALLATION.md](INSTALLATION.md): Installation and update instructions
+- [INSTALLATION_WORKFLOW.md](INSTALLATION_WORKFLOW.md): Visual workflow diagram of the installation process
+- [INSTALLATION.md](INSTALLATION.md): Detailed installation and update instructions
 - [CREDITS.md](CREDITS.md): Project credits
 
 
