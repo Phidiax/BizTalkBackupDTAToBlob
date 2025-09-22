@@ -62,6 +62,18 @@ To enable BizTalk Server to back up to Azure Blob Storage, you must configure a 
 4. **Test the Backup**
    - Run a test backup to confirm the credential is working as expected.
 
+## File Integrity Verification
+
+For security and integrity verification, use these SHA256 checksums to validate the SQL files:
+
+**BTS2020WithBlob Files:**
+- `BTS_Tracking_Logic.sql`: `E2F6C3BA99EC7DD951F639160CCE454CF1B320C4E829F2C7C554F34B85D5F081`
+- `dtasp_PurgeTrackingDatabase_BLOB.sql`: `5345D5B130430931B90485CB66079A3FEDAE3FD50539261580EF651A1D74BE60`
+
+**Verification Command (PowerShell):**
+```powershell
+Get-FileHash -Path "BTS2020WithBlob\*.sql" -Algorithm SHA256
+```
 
 ## Notes
 
