@@ -9,9 +9,8 @@
 
 Special thanks to the following contributors:
 
-- Bill Chesnut (BizTalkBill) who has documented the Backup Jobs recreation scripts
-- Sandro Pereira for asking me to look into this
-
+- **Sandro Pereira** - A respected pillar in the BizTalk community who shared his organization's production-tested backup logic, significantly enhancing the reliability and robustness of this solution
+- **Bill Chesnut (BizTalkBill)** - Documented the Backup Jobs recreation scripts
 - All other contributors to the BizTalk community
 
 ---
