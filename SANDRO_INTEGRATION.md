@@ -62,9 +62,11 @@ else
 
 ```sql
 if right( @nvcFolder, 1 ) = @pathSep
-    SET @BackupLocation=@nvcFolder + @ServerName + N'' + @DBName + N'' + @nvcDT + N'.bak'
+    -- No separator between ServerName, DBName, and nvcDT in Sandro's original code
+    SET @BackupLocation=@nvcFolder + @ServerName + @DBName + @nvcDT + N'.bak'
 else
-    SET @BackupLocation=@nvcFolder + @pathSep + @ServerName + N'' + @DBName + N'' + @nvcDT + N'.bak'
+    -- No separator between ServerName, DBName, and nvcDT in Sandro's original code
+    SET @BackupLocation=@nvcFolder + @pathSep + @ServerName + @DBName + @nvcDT + N'.bak'
 ```
 
 **Key Difference**: Sandro used no separators between ServerName, DBName, and timestamp, while our hybrid approach adds underscores for improved readability.
