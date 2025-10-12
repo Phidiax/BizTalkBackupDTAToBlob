@@ -39,11 +39,11 @@ AS
 
 	select @DBName = db_name(), @ServerName = replace( cast( isnull( serverproperty('servername'), '' ) as nvarchar ), '\', '_' ) /* this will be a file path */
 
-	-- Trim trailing @pathSep if present
-	if right(@nvcFolder, 1) = @pathSep
-		set @nvcFolder = left(@nvcFolder, len(@nvcFolder) - 1)
-
-	set @BackupLocation = @nvcFolder + @pathSep + @ServerName + N'_' + @DBName + N'_' + @nvcDT + N'.bak'
+	-- Using Sandro's production-tested path logic with underscore naming for readability
+	if right( @nvcFolder, 1 ) = @pathSep
+		SET @BackupLocation=@nvcFolder + @ServerName + N'_' + @DBName + N'_' + @nvcDT + N'.bak'
+	else
+		SET @BackupLocation=@nvcFolder + @pathSep + @ServerName + N'_' + @DBName + N'_' + @nvcDT + N'.bak'
 	EXEC ('Backup Database [' + @DBName + '] to ' + @DestinationType + '=N''' + @BackupLocation + '''')
 
 	if @@ERROR <> 0
